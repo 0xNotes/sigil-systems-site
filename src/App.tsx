@@ -1,9 +1,10 @@
 import React from 'react';
+import "./styles/styles.css"
 
 function App() {
   return (
     <div>
-      Test
+      This will be the rock upon which you build your empire.
     </div>
   );
 }

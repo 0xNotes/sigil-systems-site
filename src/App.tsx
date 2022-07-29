@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./styles/styles.css"
-import '@rainbow-me/rainbowkit/styles.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import '@rainbow-me/rainbowkit/styles.css';
@@ -40,11 +39,15 @@ const wagmiClient = createClient({
 })
 
 export default function App() {
+
+
+
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider coolMode theme={darkTheme()} chains={chains}>
         <Routes>
-          <Route path="/" element={<Home/>}/>
+          <Route path="/" element={
+            <Home/>} />
         </Routes>
       </RainbowKitProvider>
     </WagmiConfig>

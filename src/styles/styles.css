@@ -1,8 +1,55 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 body {
-  background: rgb(227, 229, 253);
-  background: linear-gradient(0deg, rgb(227, 229, 253) 7%, rgb(82, 140, 142) 86%);
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
 }
 
 .Home {
-  height: 500vh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@-webkit-keyframes Logo-Fade-In {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+@keyframes Logo-Fade-In {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+.Logo {
+  width: 60rem;
+  -webkit-animation-name: Logo-Fade-In;
+          animation-name: Logo-Fade-In;
+  -webkit-animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
+          animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }/*# sourceMappingURL=styles.css.map */

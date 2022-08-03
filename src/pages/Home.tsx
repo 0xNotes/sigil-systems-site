@@ -1,27 +1,21 @@
 import { useEffect, useState } from "react";
+import logo from "../assets/SigilSystems.svg";
 
 
 export default function Home() {
 
     const [offsetY, setOffsetY] = useState(0);
+    const [loaded, setLoaded] = useState(false);
 
-    useEffect(() => {
-        function handleScroll() {
-          setOffsetY(window.pageYOffset);
-          console.log(offsetY);
-        }
+    const handleScroll = (event: any)  => {
+        console.log('scrollTop: ', event.currentTarget.scrollTop);
+        console.log('offsetHeight: ', event.currentTarget.offsetHeight);
+      };
     
-        window.addEventListener("scroll", handleScroll);
-    
-        return () => {
-          window.removeEventListener("scroll", handleScroll);
-        };
-      }, [offsetY]);
-
 
     return(
-        <div className="Home">
-            TEST
+        <div className="Home" onScroll={handleScroll}>
+            <img className="Logo" src={logo}/>
         </div>
     );
 }

@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/SigilSystems.svg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import TEST from "../assets/TEST.svg";
 
 
 export default function Home() {
@@ -15,7 +18,8 @@ export default function Home() {
 
     return(
         <div className="Home" onScroll={handleScroll}>
-            <img className="Logo" src={logo}/>
+            <img className="Logo" src={TEST}/>
+            <FontAwesomeIcon className="Arrow" icon={faArrowDown}/>
         </div>
     );
 }

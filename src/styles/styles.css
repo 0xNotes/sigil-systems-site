@@ -23,6 +23,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 @-webkit-keyframes Logo-Fade-In {
@@ -42,6 +43,38 @@ body {
     opacity: 100;
   }
 }
+@-webkit-keyframes Arrow-Fade-Transform {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+@keyframes Arrow-Fade-Transform {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+@-webkit-keyframes Arrow-Translate-Transform {
+  from {
+    transform: translatey(0);
+  }
+  to {
+    transform: translatey(3rem);
+  }
+}
+@keyframes Arrow-Translate-Transform {
+  from {
+    transform: translatey(0);
+  }
+  to {
+    transform: translatey(3rem);
+  }
+}
 .Logo {
   width: 60rem;
   -webkit-animation-name: Logo-Fade-In;
@@ -52,4 +85,20 @@ body {
           animation-duration: 5s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+}
+
+.Arrow {
+  height: 7rem;
+  -webkit-animation-name: Arrow-Fade-Transform, Arrow-Translate-Transform;
+          animation-name: Arrow-Fade-Transform, Arrow-Translate-Transform;
+  opacity: 0;
+  -webkit-animation-duration: 1s, 1s;
+          animation-duration: 1s, 1s;
+  -webkit-animation-timing-function: ease-in-out, cubic-bezier(0.57, 0.09, 1, 0.83);
+          animation-timing-function: ease-in-out, cubic-bezier(0.57, 0.09, 1, 0.83);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: alternate, alternate-reverse;
+  -webkit-animation-delay: 6s, 5s;
+          animation-delay: 6s, 5s;
 }/*# sourceMappingURL=styles.css.map */

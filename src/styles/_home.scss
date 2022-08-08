@@ -23,12 +23,23 @@
     to{transform: translatey(3rem);}
 }
 
+.LogoContainer{
+    display: flex;
+    margin-bottom: 3rem;
+}
 
-
-//use useeffect to initially load this image with 0 opacity. on load change it to 100% opacity, should fix issue
-
-.Logo{
+.LogoSigil{
     width: 60rem;
+    position: relative;
+    animation-name: Logo-Fade-In;
+    animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+.LogoSystems{
+    width: 60rem;
+    position: absolute;
     animation-name: Logo-Fade-In;
     animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
     animation-duration: 5s;
@@ -44,6 +55,4 @@
     animation-iteration-count: infinite;
     animation-direction: alternate, alternate-reverse;
     animation-delay: 6s, 5s;
-
-
 }

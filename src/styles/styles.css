@@ -75,8 +75,27 @@ body {
     transform: translatey(3rem);
   }
 }
-.Logo {
+.LogoContainer {
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.LogoSigil {
   width: 60rem;
+  position: relative;
+  -webkit-animation-name: Logo-Fade-In;
+          animation-name: Logo-Fade-In;
+  -webkit-animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
+          animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.LogoSystems {
+  width: 60rem;
+  position: absolute;
   -webkit-animation-name: Logo-Fade-In;
           animation-name: Logo-Fade-In;
   -webkit-animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);

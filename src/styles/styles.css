@@ -21,63 +21,37 @@ body {
      object-fit: fill;
 }
 
-.Home {
-  height: 200vh;
+.home {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-@-webkit-keyframes Logo-Fade-In {
+@keyframes logo-fade-in {
   from {
     opacity: 0;
   }
   to {
-    opacity: 100;
+    opacity: 1;
   }
 }
-
-@keyframes Logo-Fade-In {
+@keyframes arrow-fade-transform {
   from {
     opacity: 0;
   }
   to {
-    opacity: 100;
+    opacity: 1;
   }
 }
-@-webkit-keyframes Arrow-Fade-Transform {
+@keyframes arrow-translate-transform {
   from {
-    opacity: 0;
+    transform: translateY(0);
   }
   to {
-    opacity: 100;
+    transform: translateY(3rem);
   }
 }
-@keyframes Arrow-Fade-Transform {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100;
-  }
-}
-@-webkit-keyframes Arrow-Translate-Transform {
-  from {
-    transform: translatey(0);
-  }
-  to {
-    transform: translatey(3rem);
-  }
-}
-@keyframes Arrow-Translate-Transform {
-  from {
-    transform: translatey(0);
-  }
-  to {
-    transform: translatey(3rem);
-  }
-}
-.LogoContainer {
+.logo-container {
   display: flex;
   margin-top: 13rem;
   margin-bottom: 3rem;
@@ -86,80 +60,61 @@ body {
   justify-content: center;
 }
 
-.LogoSigil {
+.logo-sigil {
   width: 60rem;
   position: relative;
-  -webkit-animation-name: Logo-Fade-In;
-          animation-name: Logo-Fade-In;
-  -webkit-animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
-          animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation-name: logo-fade-in;
+  animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
 }
 
-.LogoSystems {
+.logo-systems {
   width: 60rem;
   position: absolute;
-  -webkit-animation-name: Logo-Fade-In;
-          animation-name: Logo-Fade-In;
-  -webkit-animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
-          animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation-name: logo-fade-in;
+  animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
 }
 
-.LogoSlideSigil {
+.logo-slide-sigil {
   width: 60rem;
   position: relative;
-  transform: translatex(0);
-  -webkit-animation-name: Sigil-Translate;
-          animation-name: Sigil-Translate;
-  -webkit-animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
-          animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  transform: translateX(0);
+  animation-name: sigil-translate;
+  animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
 }
 
-.LogoSlideSystems {
+.logo-slide-systems {
   width: 60rem;
   position: absolute;
-  transform: translatex(0);
-  -webkit-animation-name: Systems-Translate;
-          animation-name: Systems-Translate;
-  -webkit-animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
-          animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  transform: translateX(0);
+  animation-name: systems-translate;
+  animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
 }
 
-.Arrow {
+.arrow {
   height: 7rem;
-  -webkit-animation-name: Arrow-Fade-Transform, Arrow-Translate-Transform;
-          animation-name: Arrow-Fade-Transform, Arrow-Translate-Transform;
+  animation-name: arrow-fade-transform, arrow-translate-transform;
   opacity: 0;
-  -webkit-animation-duration: 1s, 1s;
-          animation-duration: 1s, 1s;
-  -webkit-animation-timing-function: ease-in-out, cubic-bezier(0.57, 0.09, 1, 0.83);
-          animation-timing-function: ease-in-out, cubic-bezier(0.57, 0.09, 1, 0.83);
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-duration: 1s, 1s;
+  animation-timing-function: ease-in-out, cubic-bezier(0.57, 0.09, 1, 0.83);
+  animation-iteration-count: infinite;
   animation-direction: alternate, alternate-reverse;
-  -webkit-animation-delay: 6s, 5s;
-          animation-delay: 6s, 5s;
+  animation-delay: 6s, 5s;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
 }/*# sourceMappingURL=styles.css.map */

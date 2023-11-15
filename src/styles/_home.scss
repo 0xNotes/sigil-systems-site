@@ -34,7 +34,7 @@
   
   .logo-container {
     display: flex;
-    margin-top: 13rem;
+    margin-top: 5rem;
     margin-bottom: 3rem;
     width: 200vw;
     align-items: center;
@@ -42,7 +42,7 @@
   }
   
   .logo-sigil {
-    width: 40vw;
+    width: 55vw;
     position: relative;
     animation-name: logo-fade-in;
     animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
@@ -52,7 +52,7 @@
   }
   
   .logo-systems {
-    width: 40vw;
+    width: 55vw;
     position: absolute;
     animation-name: logo-fade-in;
     animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
@@ -62,7 +62,7 @@
   }
   
   .logo-slide-sigil {
-    width: 40vw;
+    width: 55vw;
     position: relative;
     transform: translateX(0);
     animation-name: sigil-translate;
@@ -73,7 +73,7 @@
   }
   
   .logo-slide-systems {
-    width: 40vw;
+    width: 55vw;
     position: absolute;
     transform: translateX(0);
     animation-name: systems-translate;
@@ -84,7 +84,7 @@
   }
   
   .arrow {
-    height: 10vh;
+    height: 6rem;
     animation-name: arrow-fade-transform, arrow-translate-transform;
     opacity: 0;
     animation-duration: 1s, 1s;

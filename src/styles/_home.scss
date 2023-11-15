@@ -97,7 +97,23 @@
 
   .description-container{
     margin-top: 5rem;
+    margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
     width: 40vw;
+  }
+
+
+  .video-container {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center; /* Center the video */
+    width: 100%; /* Ensures the container takes the full width of its parent */
+  }
+  
+  .video {
+    position: relative; /* Set position relative for positioning the iframe absolutely within */
+    width: 35%; /* Set to 35% width as required */
+    padding-top: 19.625%; /* Aspect ratio for 16:9 videos (9/16 * 35%) */
+    margin: 0 auto; /* Center the video block */
   }

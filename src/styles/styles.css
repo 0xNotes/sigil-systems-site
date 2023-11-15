@@ -61,7 +61,7 @@ body {
 }
 
 .logo-sigil {
-  width: 60rem;
+  width: 40vw;
   position: relative;
   animation-name: logo-fade-in;
   animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
@@ -71,7 +71,7 @@ body {
 }
 
 .logo-systems {
-  width: 60rem;
+  width: 40vw;
   position: absolute;
   animation-name: logo-fade-in;
   animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
@@ -81,7 +81,7 @@ body {
 }
 
 .logo-slide-sigil {
-  width: 60rem;
+  width: 40vw;
   position: relative;
   transform: translateX(0);
   animation-name: sigil-translate;
@@ -92,7 +92,7 @@ body {
 }
 
 .logo-slide-systems {
-  width: 60rem;
+  width: 40vw;
   position: absolute;
   transform: translateX(0);
   animation-name: systems-translate;
@@ -103,7 +103,7 @@ body {
 }
 
 .arrow {
-  height: 7rem;
+  height: 10vh;
   animation-name: arrow-fade-transform, arrow-translate-transform;
   opacity: 0;
   animation-duration: 1s, 1s;
@@ -114,6 +114,7 @@ body {
 }
 
 .description-container {
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   width: 40vw;

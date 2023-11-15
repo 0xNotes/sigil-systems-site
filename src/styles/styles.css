@@ -125,7 +125,6 @@ body {
   margin-top: 5rem;
   display: flex;
   width: 100%; /* Ensures the container takes the full width of its parent */
-  border: 1px solid greenyellow;
   justify-content: center;
   gap: 7rem;
 }

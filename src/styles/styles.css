@@ -124,13 +124,14 @@ body {
 .video-container {
   margin-top: 5rem;
   display: flex;
-  justify-content: center; /* Center the video */
   width: 100%; /* Ensures the container takes the full width of its parent */
+  border: 1px solid greenyellow;
+  justify-content: center;
+  gap: 7rem;
 }
 
 .video {
   position: relative; /* Set position relative for positioning the iframe absolutely within */
   width: 35%; /* Set to 35% width as required */
   padding-top: 19.625%; /* Aspect ratio for 16:9 videos (9/16 * 35%) */
-  margin: 0 auto; /* Center the video block */
 }/*# sourceMappingURL=styles.css.map */

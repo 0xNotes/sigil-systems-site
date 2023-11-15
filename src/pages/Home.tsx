@@ -61,6 +61,17 @@ export default function Home() {
             <FontAwesomeIcon className="arrow" icon={faArrowDown} />
 
             <div className="video-container">
+
+                <div className="video">
+                    <iframe
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                        src="https://www.youtube.com/embed/iYF3LSpjLVE"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                </div>
+
                 <div className="video">
                     <iframe
                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}

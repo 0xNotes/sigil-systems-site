@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Sigil from "../assets/Sigil.svg";
 import SYSTEMS from "../assets/SYSTEMS.svg";
+import FancyButton from "../components/FancyButton";
 
 
 export default function Home() {
@@ -96,10 +97,9 @@ export default function Home() {
                 </section>
             </div>
 
-            <div style={{marginBottom: '2rem'}}>
+            <div style={{ marginBottom: '2rem' }}>
                 {/* <ConnectButton /> */}
-                <button>test</button>
-
+                <FancyButton />
             </div>
 
 

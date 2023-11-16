@@ -6,56 +6,58 @@ import SYSTEMS from "../assets/SYSTEMS.svg";
 
 export default function Home() {
     const [animationPlayed, setAnimationPlayed] = useState(false);
-
-    const handleScroll = (event: any) => {
-        console.log("scrollTop: ", event.currentTarget.scrollTop);
-        console.log("offsetHeight: ", event.currentTarget.offsetHeight);
-    };
-
     const [offsetY, setOffsetY] = useState(0);
     const slideSlower = offsetY * 0.1;
 
+    // Function to check if the current device is mobile
+    const isMobile = () => window.innerWidth <= 600; // 600px as the upper limit for mobile devices
+
     useEffect(() => {
         function handleScroll() {
-            setOffsetY(window.pageYOffset);
-            console.log(offsetY);
+            if (!isMobile()) {
+                setOffsetY(window.pageYOffset);
+            }
         }
 
-        window.addEventListener("scroll", handleScroll);
+        if (!isMobile()) {
+            window.addEventListener("scroll", handleScroll);
+        }
 
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            if (!isMobile()) {
+                window.removeEventListener("scroll", handleScroll);
+            }
         };
     }, [offsetY]);
 
     useEffect(() => {
-        // Check if the animation has played already
         if (!animationPlayed && offsetY !== 0) {
-            // Set animationPlayed to true to prevent future animations
             setAnimationPlayed(true);
         }
     }, [animationPlayed, offsetY]);
 
     return (
-        <div className="home" onScroll={handleScroll}>
+        <div className="home">
             <div className="logo-container">
                 {animationPlayed ? (
                     <img
                         className="logo-slide-sigil"
                         style={{ transform: `translateX(-${slideSlower}rem)` }}
                         src={Sigil}
+                        alt="Sigil logo"
                     />
                 ) : (
-                    <img className="logo-sigil" src={Sigil} />
+                    <img className="logo-sigil" src={Sigil} alt="Sigil logo" />
                 )}
                 {animationPlayed ? (
                     <img
                         className="logo-slide-systems"
                         style={{ transform: `translateX(${slideSlower}rem)` }}
                         src={SYSTEMS}
+                        alt="Systems logo"
                     />
                 ) : (
-                    <img className="logo-systems" src={SYSTEMS} />
+                    <img className="logo-systems" src={SYSTEMS} alt="Systems logo" />
                 )}
             </div>
             <FontAwesomeIcon className="arrow" icon={faArrowDown} />

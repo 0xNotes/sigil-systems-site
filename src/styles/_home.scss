@@ -39,6 +39,12 @@
     width: 200vw;
     align-items: center;
     justify-content: center;
+
+
+    @include respond(phone){
+      margin-bottom: 2rem;
+    }
+
   }
   
   .logo-sigil {
@@ -49,6 +55,11 @@
     animation-duration: 5s;
     animation-iteration-count: 1;
     animation-delay: 0s;
+
+    @include respond(phone){
+      width: 70vw;
+    }
+
   }
   
   .logo-systems {
@@ -59,6 +70,11 @@
     animation-duration: 5s;
     animation-iteration-count: 1;
     animation-delay: 0s;
+
+    @include respond(phone){
+      width: 70vw;
+    }
+
   }
   
   .logo-slide-sigil {
@@ -70,6 +86,12 @@
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 0s;
+
+
+    @include respond(phone){
+      width: 70vw;
+    }
+
   }
   
   .logo-slide-systems {
@@ -81,6 +103,12 @@
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 0s;
+
+
+    @include respond(phone){
+      width: 70vw;
+    }
+
   }
   
   .arrow {
@@ -92,6 +120,12 @@
     animation-iteration-count: infinite;
     animation-direction: alternate, alternate-reverse;
     animation-delay: 6s, 5s;
+
+
+    @include respond(phone){
+      height: 8vh;
+    }
+
   }
   
 
@@ -101,6 +135,10 @@
     display: flex;
     flex-direction: column;
     width: 40vw;
+
+    @include respond(phone){
+      width: 85vw;
+    }
   }
 
 
@@ -108,13 +146,28 @@
     margin-top: 5rem;
     display: flex;
     width: 100%; /* Ensures the container takes the full width of its parent */
-    //border: 1px solid greenyellow;
+    border: 1px solid greenyellow;
     justify-content: center;
     gap: 7rem;
+
+
+    @include respond(phone){
+      flex-direction: column;
+      align-items: center;
+      
+    }
+
   }
   
   .video {
     position: relative; /* Set position relative for positioning the iframe absolutely within */
     width: 35%; /* Set to 35% width as required */
     padding-top: 19.625%; /* Aspect ratio for 16:9 videos (9/16 * 35%) */
+
+    @include respond(phone){
+      width: 80%;
+      padding-top: 45%; /* Aspect ratio for 16:9 videos (9/16 * 35%) */
+
+      
+    }
   }

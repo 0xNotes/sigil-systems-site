@@ -59,6 +59,11 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 37.5em) {
+  .logo-container {
+    margin-bottom: 2rem;
+  }
+}
 
 .logo-sigil {
   width: 55vw;
@@ -69,6 +74,11 @@ body {
   animation-iteration-count: 1;
   animation-delay: 0s;
 }
+@media only screen and (max-width: 37.5em) {
+  .logo-sigil {
+    width: 70vw;
+  }
+}
 
 .logo-systems {
   width: 55vw;
@@ -78,6 +88,11 @@ body {
   animation-duration: 5s;
   animation-iteration-count: 1;
   animation-delay: 0s;
+}
+@media only screen and (max-width: 37.5em) {
+  .logo-systems {
+    width: 70vw;
+  }
 }
 
 .logo-slide-sigil {
@@ -90,6 +105,11 @@ body {
   animation-iteration-count: 1;
   animation-delay: 0s;
 }
+@media only screen and (max-width: 37.5em) {
+  .logo-slide-sigil {
+    width: 70vw;
+  }
+}
 
 .logo-slide-systems {
   width: 55vw;
@@ -100,6 +120,11 @@ body {
   animation-duration: 2s;
   animation-iteration-count: 1;
   animation-delay: 0s;
+}
+@media only screen and (max-width: 37.5em) {
+  .logo-slide-systems {
+    width: 70vw;
+  }
 }
 
 .arrow {
@@ -112,6 +137,11 @@ body {
   animation-direction: alternate, alternate-reverse;
   animation-delay: 6s, 5s;
 }
+@media only screen and (max-width: 37.5em) {
+  .arrow {
+    height: 8vh;
+  }
+}
 
 .description-container {
   margin-top: 5rem;
@@ -120,17 +150,35 @@ body {
   flex-direction: column;
   width: 40vw;
 }
+@media only screen and (max-width: 37.5em) {
+  .description-container {
+    width: 85vw;
+  }
+}
 
 .video-container {
   margin-top: 5rem;
   display: flex;
   width: 100%; /* Ensures the container takes the full width of its parent */
+  border: 1px solid greenyellow;
   justify-content: center;
   gap: 7rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .video-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .video {
   position: relative; /* Set position relative for positioning the iframe absolutely within */
   width: 35%; /* Set to 35% width as required */
   padding-top: 19.625%; /* Aspect ratio for 16:9 videos (9/16 * 35%) */
+}
+@media only screen and (max-width: 37.5em) {
+  .video {
+    width: 80%;
+    padding-top: 45%; /* Aspect ratio for 16:9 videos (9/16 * 35%) */
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -203,4 +203,25 @@ body {
     padding-top: 45%;
     /* Aspect ratio for 16:9 videos (9/16 * 35%) */
   }
+}
+
+.fancy-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-top: 4px solid transparent;
+  border-left: 4px solid transparent;
+  background-clip: padding-box;
+  /* For the wave effect on the border */
+  cursor: pointer;
+  animation-name: fancy-animation;
+  /* Smooth transition for hover effects */
+}
+
+@keyframes fancy-animation {
+  from {
+    border: 6px solid black;
+  }
+  to {
+    border: 6px solid black;
+  }
 }/*# sourceMappingURL=styles.css.map */

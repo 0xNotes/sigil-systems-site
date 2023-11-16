@@ -4,8 +4,10 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Sigil from "../assets/Sigil.svg";
 import SYSTEMS from "../assets/SYSTEMS.svg";
 
+
 export default function Home() {
     const [offsetY, setOffsetY] = useState(0);
+
 
     // Function to check if the current device is mobile
     const isMobile = () => window.innerWidth <= 600; // 600px as the upper limit for mobile devices
@@ -51,7 +53,6 @@ export default function Home() {
                     <iframe
                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
                         src="https://www.youtube.com/embed/iYF3LSpjLVE"
-                        frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     ></iframe>
@@ -61,7 +62,6 @@ export default function Home() {
                     <iframe
                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
                         src="https://www.youtube.com/embed/9ipx9EObxR4"
-                        frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     ></iframe>
@@ -94,6 +94,12 @@ export default function Home() {
 
                     <p>If you're looking for a skilled engineer to bring your vision to life with innovative and effective solutions, <a href="mailto:ross@sigil.systems">let's connect</a>.</p>
                 </section>
+            </div>
+
+            <div style={{marginBottom: '2rem'}}>
+                {/* <ConnectButton /> */}
+                <button>test</button>
+
             </div>
 
 

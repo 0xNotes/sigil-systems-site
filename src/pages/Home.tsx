@@ -5,60 +5,43 @@ import Sigil from "../assets/Sigil.svg";
 import SYSTEMS from "../assets/SYSTEMS.svg";
 
 export default function Home() {
-    const [animationPlayed, setAnimationPlayed] = useState(false);
     const [offsetY, setOffsetY] = useState(0);
-    const slideSlower = offsetY * 0.1;
 
     // Function to check if the current device is mobile
     const isMobile = () => window.innerWidth <= 600; // 600px as the upper limit for mobile devices
 
     useEffect(() => {
+        if (isMobile()) {
+            // Do nothing for mobile devices
+            return;
+        }
+
         function handleScroll() {
-            if (!isMobile()) {
-                setOffsetY(window.pageYOffset);
-            }
+            setOffsetY(window.pageYOffset);
         }
 
-        if (!isMobile()) {
-            window.addEventListener("scroll", handleScroll);
-        }
+        window.addEventListener("scroll", handleScroll);
 
-        return () => {
-            if (!isMobile()) {
-                window.removeEventListener("scroll", handleScroll);
-            }
-        };
-    }, [offsetY]);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
-    useEffect(() => {
-        if (!animationPlayed && offsetY !== 0) {
-            setAnimationPlayed(true);
-        }
-    }, [animationPlayed, offsetY]);
+    const slideSlower = isMobile() ? 0 : offsetY * 0.1; // No slide effect on mobile
 
     return (
         <div className="home">
             <div className="logo-container">
-                {animationPlayed ? (
-                    <img
-                        className="logo-slide-sigil"
-                        style={{ transform: `translateX(-${slideSlower}rem)` }}
-                        src={Sigil}
-                        alt="Sigil logo"
-                    />
-                ) : (
-                    <img className="logo-sigil" src={Sigil} alt="Sigil logo" />
-                )}
-                {animationPlayed ? (
-                    <img
-                        className="logo-slide-systems"
-                        style={{ transform: `translateX(${slideSlower}rem)` }}
-                        src={SYSTEMS}
-                        alt="Systems logo"
-                    />
-                ) : (
-                    <img className="logo-systems" src={SYSTEMS} alt="Systems logo" />
-                )}
+                <img
+                    className="logo-slide-sigil"
+                    style={{ transform: `translateX(-${slideSlower}rem)` }}
+                    src={Sigil}
+                    alt="Sigil logo"
+                />
+                <img
+                    className="logo-slide-systems"
+                    style={{ transform: `translateX(${slideSlower}rem)` }}
+                    src={SYSTEMS}
+                    alt="Systems logo"
+                />
             </div>
             <FontAwesomeIcon className="arrow" icon={faArrowDown} />
 
@@ -109,7 +92,7 @@ export default function Home() {
                         <p>Customized solutions, quality and reliability, and end-to-end services for a hassle-free development experience.</p>
                     </section>
 
-                    <p>If you're looking for a skilled engineer to bring your vision to life with innovative and effective solutions, <a href="#contact">let's connect</a>.</p>
+                    <p>If you're looking for a skilled engineer to bring your vision to life with innovative and effective solutions, <a href="mailto:ross@sigil.systems">let's connect</a>.</p>
                 </section>
             </div>
 

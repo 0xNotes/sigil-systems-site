@@ -156,12 +156,6 @@ body {
 @media only screen and (max-width: 37.5em) {
   .arrow {
     height: 8vh;
-    animation-name: none;
-    animation-duration: none;
-    animation-timing-function: none;
-    animation-iteration-count: none;
-    animation-direction: none;
-    animation-delay: none;
   }
 }
 
@@ -175,13 +169,15 @@ body {
 @media only screen and (max-width: 37.5em) {
   .description-container {
     width: 85vw;
+    margin-top: 2rem;
   }
 }
 
 .video-container {
   margin-top: 5rem;
   display: flex;
-  width: 100%; /* Ensures the container takes the full width of its parent */
+  width: 100%;
+  /* Ensures the container takes the full width of its parent */
   justify-content: center;
   gap: 7rem;
 }
@@ -189,17 +185,22 @@ body {
   .video-container {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
   }
 }
 
 .video {
-  position: relative; /* Set position relative for positioning the iframe absolutely within */
-  width: 35%; /* Set to 35% width as required */
-  padding-top: 19.625%; /* Aspect ratio for 16:9 videos (9/16 * 35%) */
+  position: relative;
+  /* Set position relative for positioning the iframe absolutely within */
+  width: 35%;
+  /* Set to 35% width as required */
+  padding-top: 19.625%;
+  /* Aspect ratio for 16:9 videos (9/16 * 35%) */
 }
 @media only screen and (max-width: 37.5em) {
   .video {
     width: 80%;
-    padding-top: 45%; /* Aspect ratio for 16:9 videos (9/16 * 35%) */
+    padding-top: 45%;
+    /* Aspect ratio for 16:9 videos (9/16 * 35%) */
   }
 }/*# sourceMappingURL=styles.css.map */

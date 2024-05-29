@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Sigil from "../assets/Sigil.svg";
 import SYSTEMS from "../assets/SYSTEMS.svg";
-//import FancyButton from "../components/FancyButton";
+import FancyButton from "../components/FancyButton";
 
 
 export default function Home() {
@@ -96,10 +96,10 @@ export default function Home() {
                     <p>If you're looking for a skilled engineer to bring your vision to life with innovative and effective solutions, <a href="mailto:ross@sigil.systems">let's connect</a>.</p>
                 </section>
             </div>
-{/* 
+
             <div style={{ marginBottom: '2rem' }}>
                 <FancyButton />
-            </div> */}
+            </div>
 
 
         </div>

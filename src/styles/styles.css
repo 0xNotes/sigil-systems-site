@@ -153,6 +153,7 @@ body {
   animation-iteration-count: infinite;
   animation-direction: alternate, alternate-reverse;
   animation-delay: 6s, 5s;
+  color: black;
 }
 @media only screen and (max-width: 37.5em) {
   .arrow {
@@ -166,6 +167,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 40vw;
+  color: black;
 }
 @media only screen and (max-width: 37.5em) {
   .description-container {

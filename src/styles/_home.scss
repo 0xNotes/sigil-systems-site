@@ -1,0 +1,266 @@
+.home {
+  // height: 200vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@keyframes logo-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes arrow-fade-transform {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes arrow-translate-transform {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(3rem);
+  }
+}
+
+.logo-container {
+  display: flex;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  width: 200vw;
+  align-items: center;
+  justify-content: center;
+
+
+  @include respond(phone) {
+    margin-bottom: 2rem;
+  }
+
+}
+
+.logo-sigil {
+  width: 55vw;
+  position: relative;
+  animation-name: logo-fade-in;
+  animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+
+  @include respond(phone) {
+    width: 70vw;
+    transform: translate(0rem) !important;
+
+  }
+
+}
+
+.logo-systems {
+  width: 55vw;
+  position: absolute;
+  animation-name: logo-fade-in;
+  animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+
+  @include respond(phone) {
+    width: 70vw;
+    transform: translate(0rem) !important;
+
+  }
+
+}
+
+.logo-slide-sigil {
+  width: 55vw;
+  position: relative;
+  transform: translateX(0);
+  animation-name: sigil-translate;
+  animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+
+
+  @include respond(phone) {
+    width: 70vw;
+    animation-name: none;
+    animation-duration: none;
+    animation-timing-function: none;
+    animation-iteration-count: none;
+    animation-direction: none;
+    animation-delay: none;
+    transform: translate(0rem) !important;
+
+  }
+
+}
+
+.logo-slide-systems {
+  width: 55vw;
+  position: absolute;
+  transform: translateX(0);
+  animation-name: systems-translate;
+  animation-timing-function: cubic-bezier(0.96, -0.02, 0.22, 0.91);
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+
+
+  @include respond(phone) {
+    width: 70vw;
+    animation-name: none;
+    animation-duration: none;
+    animation-timing-function: none;
+    animation-iteration-count: none;
+    animation-direction: none;
+    animation-delay: none;
+    transform: translate(0rem) !important;
+
+  }
+
+}
+
+.arrow {
+  height: 6rem;
+  animation-name: arrow-fade-transform, arrow-translate-transform;
+  opacity: 0;
+  animation-duration: 1s, 1s;
+  animation-timing-function: ease-in-out, cubic-bezier(0.57, 0.09, 1, 0.83);
+  animation-iteration-count: infinite;
+  animation-direction: alternate, alternate-reverse;
+  animation-delay: 6s, 5s;
+
+
+  @include respond(phone) {
+    height: 8vh;
+
+  }
+
+}
+
+
+.description-container {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+
+  @include respond(phone) {
+    width: 85vw;
+    margin-top: 2rem;
+
+  }
+}
+
+
+.video-container {
+  margin-top: 5rem;
+  display: flex;
+  width: 100%;
+  /* Ensures the container takes the full width of its parent */
+  //border: 1px solid greenyellow;
+  justify-content: center;
+  gap: 7rem;
+
+
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+}
+
+.video {
+  position: relative;
+  /* Set position relative for positioning the iframe absolutely within */
+  width: 35%;
+  /* Set to 35% width as required */
+  padding-top: 19.625%;
+  /* Aspect ratio for 16:9 videos (9/16 * 35%) */
+
+  @include respond(phone) {
+    width: 80%;
+    padding-top: 45%;
+    /* Aspect ratio for 16:9 videos (9/16 * 35%) */
+
+
+  }
+}
+
+
+.fancy-button {
+  display: flex;
+  padding: 1rem;
+  background-color: #fccb90;
+  color: black;
+  background-clip: padding-box;
+  /* For the wave effect on the border */
+  cursor: pointer;
+  animation-name: fancy-animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /* Smooth transition for hover effects */
+}
+
+
+@keyframes fancy-animation {
+  from {
+    border: 8px solid #84fab0;
+    border-top: 8px solid transparent;
+    border-left: 8px solid transparent;
+  }
+
+  to {
+    border: 8px solid #8fd3f4;
+    border-top: 8px solid transparent;
+    border-left: 8px solid transparent;
+  }
+}
+
+.fancy-button-clicked {
+  display: flex;
+  padding: 1rem;
+  color: black;
+  background-clip: padding-box;
+  /* For the wave effect on the border */
+  cursor: pointer;
+  animation-name: fancy-animation-clicked;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /* Smooth transition for hover effects */
+}
+
+
+@keyframes fancy-animation-clicked {
+  from {
+    border: 8px solid #84fab0;
+    background-color: #84fab0;
+    border-top: 8px solid transparent;
+    border-left: 8px solid transparent;
+  }
+
+  to {
+    border: 8px solid #8fd3f4;
+    background-color: #8fd3f4;
+    border-top: 8px solid transparent;
+    border-left: 8px solid transparent;
+  }
+}

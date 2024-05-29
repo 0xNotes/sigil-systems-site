@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import { WagmiProvider } from "wagmi";
 import { config } from "./configs/config";
 import '@rainbow-me/rainbowkit/styles.css';
+import CardMint from "./pages/CardMint";
 
 import {
   getDefaultConfig,
@@ -40,6 +41,9 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
+          </Routes>
+          <Routes>
+            <Route path="/mint" element={<CardMint />} />
           </Routes>
         </Router>
       </RainbowKitProvider>

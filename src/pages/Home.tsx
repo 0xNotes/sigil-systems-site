@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Sigil from "../assets/Sigil.svg";
 import SYSTEMS from "../assets/SYSTEMS.svg";
-import FancyButton from "../components/FancyButton";
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Home() {
@@ -12,6 +12,7 @@ export default function Home() {
 
     // Function to check if the current device is mobile
     const isMobile = () => window.innerWidth <= 600; // 600px as the upper limit for mobile devices
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (isMobile()) {
@@ -29,6 +30,11 @@ export default function Home() {
     }, []);
 
     const slideSlower = isMobile() ? 0 : offsetY * 0.1; // No slide effect on mobile
+
+    const navigateToMint = () => {
+        navigate('/mint');
+    };
+
 
     return (
         <div className="home">
@@ -97,9 +103,7 @@ export default function Home() {
                 </section>
             </div>
 
-            <div style={{ marginBottom: '2rem' }}>
-                <FancyButton />
-            </div>
+            <button onClick={navigateToMint}>Go to Mint</button>
 
 
         </div>

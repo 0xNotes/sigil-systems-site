@@ -30,16 +30,12 @@ export default function CardMint() {
 
   return (
     <div className="cardMint">
+      <FancyButton />
       <div className="card-container">
         <div className="card" ref={cardRef}>
           <img className="front" src="src/assets/cardFront/FRONT.png" />
           <img className="back" src={images[currentIndex]} />
         </div>
-      </div>
-
-      <div>
-        <FancyButton />
-        {/* <div>Each Bidness Card ($BID) will have randomized traits including a randomized discount for services rendered. (These do not stack)</div> */}
       </div>
     </div>
   );

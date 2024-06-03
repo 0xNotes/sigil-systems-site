@@ -270,14 +270,19 @@ body {
   box-sizing: border-box;
 }
 
+.cardMint {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .card-container {
   width: 1050px; /* Adjusted width according to the scaled dimensions */
   height: 600px; /* Adjusted height according to the scaled dimensions */
-  margin: 0 auto; /* Center the card-container within the cardMint div */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 4rem;
 }
 
 .card {
@@ -315,12 +320,8 @@ body {
     transform: rotateY(360deg);
   }
 }
-.cardMint {
+.mintBox {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  align-items: center; /* Align items vertically to the center */
-  justify-content: center; /* Distribute items with space around them */
-  margin-top: 2rem;
-  gap: 4rem;
+  border: 2px dotted black;
 }/*# sourceMappingURL=styles.css.map */

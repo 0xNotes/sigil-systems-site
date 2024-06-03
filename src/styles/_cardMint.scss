@@ -1,7 +1,18 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .card-container {
-  width: 400px;
-  height: 600px;
-  margin: 50px auto;
+  width: 1050px; /* Adjusted width according to the scaled dimensions */
+  height: 600px; /* Adjusted height according to the scaled dimensions */
+  margin: 0 auto; /* Center the card-container within the cardMint div */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
 }
 
 .card {
@@ -9,8 +20,10 @@
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  animation: slowRotation 10s infinite cubic-bezier(0.42, 0, 0.58, 1);
-
+  animation: slowRotation 10s infinite cubic-bezier(.48,.82,.75,0);
+  animation-direction: alternate;
+  transform: scale(0.8); /* Apply the scale factor */
+  //border: 2px solid red; /* Add border for debugging */
 }
 
 .card img {
@@ -20,6 +33,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  //border: 2px solid green; /* Add border for debugging */
 }
 
 .front {
@@ -39,10 +53,13 @@
   }
 }
 
-.cardMint{
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
+.cardMint {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center; /* Align items vertically to the center */
+  justify-content: center; /* Distribute items with space around them */
+  margin-top: 2rem;
+  gap: 4rem;
+  //border: 2px solid salmon;
 }
-
